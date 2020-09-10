@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Info Display App</title>
+
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+<div id="flex_div">
+     <canvas id="canvas" width="500" height="500" >cccc</canvas> 
+<div class="container">
+	 <div class="app-title">
+            <p>Weather</p>
+        </div>
+        <div class="notification"> </div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <img src="/assets/icons/unknown.png" alt="">
+            </div>
+            <div class="temperature-value">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+                <p> - </p>
+            </div>
+            <div class="location">
+                <p>-</p>
+            </div>
+        </div>
+    </div>
+  <img src="/assets/today.jpeg" alt="newsToday" id="imgT">
+    <div class="buttons-container">
+      <div class="buttons-container__button buttons-container__button--red" id="button-red">ALERT!</div>
+      <div class="buttons-container__button buttons-container__button--yellow" id="button-yellow">TIMER ON!</div>
+      <div class="buttons-container__button buttons-container__button--green" id="button-green">REMIND ME!</div>
+    </div>
+<div id="outputDiv">Here some output from the raspberry button</div>
+    <img src="/assets/todaysnews.png" alt="Today" id="headerImage">
+  </div>
+    <script src="assets/index.js"></script>
+    <script src="/assets/socket.io.js"></script>
+    <script src="/assets/main.js"></script>
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
