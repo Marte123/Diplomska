@@ -27,8 +27,8 @@ if('geolocation' in navigator){
 
 // SET USER'S POSITION
 function setPosition(position){
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    let latitude = 41.03143;
+    let longitude =  21.33474;
     
     getWeather(latitude, longitude);
 }

@@ -3,7 +3,7 @@
   <head>
     <title>Info Display App</title>
 
-    <link rel="stylesheet" href="/assets/style.css"/>
+    <link rel="stylesheet" href="./style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -11,7 +11,7 @@
      <canvas id="canvas" width="500" height="500" >cccc</canvas> 
 <div class="container">
 	 <div class="app-title">
-            <p>Weather</p>
+            <p>WEATHER</p>
         </div>
         <div class="notification"> </div>
         <div class="weather-container">
@@ -29,18 +29,22 @@
             </div>
         </div>
     </div>
-  <img src="/assets/today.jpeg" alt="newsToday" id="imgT">
+    <iframe width="715" height="450" src="https://www.youtube.com/embed/NMre6IAAAiU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="buttons-container">
       <div class="buttons-container__button buttons-container__button--red" id="button-red">ALERT!</div>
       <div class="buttons-container__button buttons-container__button--yellow" id="button-yellow">TIMER ON!</div>
       <div class="buttons-container__button buttons-container__button--green" id="button-green">REMIND ME!</div>
     </div>
 <div id="outputDiv">Here some output from the raspberry button</div>
-    <img src="/assets/todaysnews.png" alt="Today" id="headerImage">
+    <img src="./todaysnews.png" alt="Today" id="headerImage">
   </div>
-    <script src="assets/index.js"></script>
-    <script src="/assets/socket.io.js"></script>
-    <script src="/assets/main.js"></script>
-    <script src="/assets/app.js"></script>
+ 
+  
+    <script src="./index.js"></script>
+   <!--script src="./socket.io.js"></script> --> 
+    <script src="./main.js"></script>
+    <script src="./app.js"></script>
+    <script src="video.js"></script>
+    
   </body>
 </html>

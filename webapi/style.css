@@ -5,6 +5,8 @@
 #outputDiv{
 width:300px;
 color:white;
+height:200px;
+background-color: #191654; 
 }
 #imgT{
 width:545px;
@@ -80,9 +82,9 @@ body {
 .buttons-container__button--green { background-color: #11998e; }
 
 .container{
-    width: 300px;    
-    background-color: #43C6AC;
-    
+  background: #ADA996;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: block;
     
     padding-bottom : 50px;
@@ -99,7 +101,7 @@ body {
     text-align: center;
     padding: 15px;
     margin: 0 auto;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 300;
     color: #293251;
 }
@@ -119,12 +121,11 @@ body {
 
 .weather-container{
     width: 300px;
-    height: 340px;
+    height: 400px;
     background: #ADA996;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius:50px;
+    border-radius:50px;
 }
 
 .weather-icon{
@@ -139,7 +140,7 @@ body {
 
 .temperature-value{
     width: 300px;
-    height:60px;
+    height:70px;
 }
 
 .temperature-value p{
@@ -148,6 +149,7 @@ body {
     color: #293251;
     font-size: 4em;
     text-align: center;
+    text-decoration: bold ;
     cursor: pointer;
 }
 
@@ -157,7 +159,7 @@ body {
 
 .temperature-value span{
     color: #293251;
-    font-size: 0.5em;
+    font-size: 0.8em;
 }
 
 .temperature-description{
@@ -165,11 +167,11 @@ body {
 }
 
 .temperature-description p{
-    padding: 8px;
+    padding: 10px;
     margin: 0;
     color: #293251;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .location{
@@ -181,11 +183,11 @@ body {
     padding: 0;
     color: #293251;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1.5em;
 }
 #headerImage {
 	height:200px;
-	width:545px;
+	width:715px;
 }
 #flex_div{
 	display:flex;
