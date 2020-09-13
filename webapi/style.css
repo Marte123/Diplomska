@@ -1,23 +1,9 @@
 *{
 	padding:0;
-	margin:0;
+  margin:0;
+  box-sizing: border-box;
+  user-select: none;
 }
-#outputDiv{
-width:300px;
-color:white;
-height:200px;
-background-color: #191654; 
-}
-#imgT{
-width:545px;
-height:500px;
-}
-html, body {
-  font-size: 14px;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #333333;
-}
-
 body {
   padding: 0px;
   margin: 0px;
@@ -28,22 +14,40 @@ body {
   background-repeat: no-repeat;
   background-size:100%;
 }
+/*DIVS*/
 
-* {
-  box-sizing: border-box;
-  user-select: none;
+#outputDiv{
+width:300px;
+color:white;
+height:200px;
+background-color: #191654;
 }
 
-/* Application title */
-#heading1 {
-  font-size: 30px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0;
-  line-height: 1;
-  color: white; 
+#imgT{
+width:545px;
+height:500px;
 }
+
+html, body {
+  font-size: 14px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #333333;
+}
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  background: #ADA996;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ADA996,#DBDBDB, #F2F2F2, #EAEAEA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,  #ADA996,#DBDBDB, #F2F2F2, #EAEAEA ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 47px;
+}
+
+/*BUTTONS*/
+
 
 /* Buttons container */
 .buttons-container {
@@ -60,7 +64,7 @@ body {
   display: flex;
   width: 90px;
   height: 60px;
-  border-radius: 3px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -83,8 +87,8 @@ body {
 
 .container{
   background: #ADA996;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: block;
     
     padding-bottom : 50px;
@@ -96,7 +100,7 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
-.app-title p{
+.title p{
     font-family:Times, Times New Roman, Georgia, serif;
     text-align: center;
     padding: 15px;
@@ -121,11 +125,8 @@ body {
 
 .weather-container{
     width: 300px;
-    height: 400px;
-    background: #ADA996;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius:50px;
+    height: 388px;
+  
 }
 
 .weather-icon{
@@ -185,6 +186,7 @@ body {
     text-align: center;
     font-size: 1.5em;
 }
+/*IMAGES*/
 #headerImage {
 	height:200px;
 	width:715px;
@@ -196,3 +198,62 @@ body {
 	align-items:flex-start;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1bc9c0;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0fb6a0;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

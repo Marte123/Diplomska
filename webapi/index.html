@@ -10,7 +10,7 @@
 <div id="flex_div">
      <canvas id="canvas" width="500" height="500" >cccc</canvas> 
 <div class="container">
-	 <div class="app-title">
+	 <div class="title">
             <p>WEATHER</p>
         </div>
         <div class="notification"> </div>
@@ -29,13 +29,47 @@
             </div>
         </div>
     </div>
+    <div class="newsDiv">
     <iframe width="715" height="450" src="https://www.youtube.com/embed/NMre6IAAAiU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="buttons-container">
+    <div class="buttons-row">
+
+    <div class="button-play"><img src="./icons/icons8-rewind-64.png" width="45px" height="45px"></div>
+    <div class="button-play"><img src="./icons/icons8-pause-64.png" width="45px" height="45px"></div>
+    <div class="button-play"><img src="./icons/icons8-stop-64.png" width="45px" height="45px"></div>
+    <div class="button-play"><img src="./icons/icons8-play-64.png" width="45px" height="45px"></div>
+    <div class="button-play"><img src="./icons/icons8-fast-forward-64.png" width="45px" height="45px"></div>
+
+    </div>
+    
+  </div>
+  <div class="buttons-container">
       <div class="buttons-container__button buttons-container__button--red" id="button-red">ALERT!</div>
       <div class="buttons-container__button buttons-container__button--yellow" id="button-yellow">TIMER ON!</div>
       <div class="buttons-container__button buttons-container__button--green" id="button-green">REMIND ME!</div>
     </div>
-<div id="outputDiv">Here some output from the raspberry button</div>
+<div id="outputDiv">
+
+  <h1>Check if the light is on</h1>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script> <!-- include socket.io client side script -->
+<script>
+let socket = io(); //load socket.io-client and connect to the host that serves the page
+window.addEventListener("load", function(){ //when page loads
+  let lightbox = document.getElementById("light");
+  lightbox.addEventListener("change", function() { //add event listener for when checkbox changes
+    socket.emit("light", Number(this.checked)); //send button status to server (as 1 or 0)
+  });
+});
+socket.on('light', function (data) { //get button status from client
+  document.getElementById("light").checked = data; //change checkbox according to push button on Raspberry Pi
+  socket.emit("light", data); //send push button status to back to server
+});
+</script>
+  Here some output from the raspberry button</div>
     <img src="./todaysnews.png" alt="Today" id="headerImage">
   </div>
  
