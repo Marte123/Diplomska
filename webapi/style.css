@@ -245,7 +245,9 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
+.switch{
+  margin:20px 120px;
+}
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
@@ -253,4 +255,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.heading1{
+  margin-top: 30px;
+  text-align: center;
 }
